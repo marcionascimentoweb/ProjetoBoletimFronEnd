@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Projeto Boletim</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="src/css/estilo.css">
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="total">
+    <div class="container-fluid">
+        <div class="container cabecalho">
+            <div class="row">
+                <header>
+                    <img class="logotipo" src="img/logotipo.png">
+                </header>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="container formulario">
+        <section>
+            <form>
+                <div class="form-group">
+                    <label for="nome">Nome: </label>
+                    <input type="text" class="form-control" name="nome" id="nome" placeholder="Digite seu nome">
+                    <br>
+                
+                    <div class="form-check">
+                        <label class="form-check-label" for="sexo">Sexo:</label><br>
+                        <input type="radio" class="form-check-input" name="sexo" id="masculino" value="masculino">Masculino<br>  
+                        <input type="radio" class="form-check-input" name="sexo" id="feminino" value="feminino">Feminino<br><br>
+                    </div>
+                    
+                    
+                    <label for="curso">Curso:</label>
+                    <select class="form-control" name="curso" id="curso" size=3>
+                        <option selected>Escolha o Curso</option>
+                        <option value="matematica">Matematica</option>
+                        <option value="portugues">português</option>
+                        <option value="ciencias">Ciências</option>
+                        <option value="historia">História</option>
+                        <option value="geografia">Geografia</option>
+                        <option value="ingles">Inglês</option>
+                    </select><br><br>
+                    
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="nota1">Nota 1:</label>
+                                    <input type="number" class="form-control" name="nota1" id="nota1" placeholder="Digite a nota do primeiro bimestre"><br>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="nota2">Nota 2:</label>
+                                    <input type="number" class="form-control" name="nota2" id="nota2" placeholder="Digite a nota do segundo bimestre"><br>
+                            </div>    
+                        </div>
+                        <div class="row">
+                                <div class="col-md-6">
+                                    <label for="nota3">Nota 3:</label>
+                                        <input type="number" class="form-control" name="nota3" id="nota3" placeholder="Digite a nota do terceiro bimestre"><br>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="nota4">Nota 4:</label>
+                                        <input type="number" class="form-control" name="nota4" id="nota4" placeholder="Digite a nota do quarto bimestre"><br>
+                                </div>        
+                        </div>
+                    </div>
+                    
+                    <p>
+                    <input type="button" class="btn btn-primary btn-lg btn-block" style="background-color: #2d95b0" value="Gerar Media" onclick="Boletim()">
+                    </p>    
+
+                    <div id="media">
+                        Preencha todos os dados para saber a média!
+                    </div>
+
+                    <div id="situacao">
+                        Situação
+                    </div>
+
+                    <p>
+                        <input type="reset" class="btn btn-primary btn-lg btn-block" style="background-color:  #022f40" value="Limpar Campos" onclick="limpar()">
+                    </p>  
+                    
+                
+                </div>
+            </form>
+
+    </section>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class ="container rodape"> 
+        <div class="row">
+        <footer>
+            <h3 class="titulo">TÉCNOLOGIAS USADAS</h3>
+            <h5 class="subtitulo">Javascript, Html 5, CSS, Jasmine, Karma e Bootstrap</h5>
+        </footer>
+    
+    </div>
+    </div>
+</div>
+<script src="js/Boletim.js"></script>
+
+</body>
+</html>
